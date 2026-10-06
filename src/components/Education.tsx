@@ -1,88 +1,67 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData.ts';
-import { GraduationCap, Award, Calendar, MapPin, CheckCircle, ShieldCheck } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
 
 export const EducationSection: React.FC = () => {
   return (
-    <section id="education" className="py-24 relative overflow-hidden bg-slate-950/40 border-t border-b border-white/[0.04]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-20 border-b border-white/[0.06]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono">
-            <GraduationCap className="w-3.5 h-3.5" />
-            <span>Academic Background & Qualifications</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Education & Academic Credentials
+        <div className="max-w-3xl mb-12 space-y-2">
+          <span className="text-xs font-mono uppercase tracking-wider text-indigo-400">
+            Education
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 tracking-tight">
+            Academic Background
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
-            Rigorous foundation in computer science, mathematical optimization, and machine learning research.
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            Graduate and undergraduate foundations in computer science and machine learning.
           </p>
         </div>
 
         {/* Education Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
           {portfolioData.education.map((edu, index) => (
             <div
               key={index}
-              className="glass-panel p-7 sm:p-8 rounded-2xl border border-white/[0.08] hover:border-indigo-500/40 transition-all duration-300 shadow-xl flex flex-col justify-between group hover:-translate-y-1"
+              className="p-6 sm:p-7 rounded-xl bg-[#0c0e14] border border-white/[0.08] hover:border-white/[0.16] transition-all flex flex-col justify-between"
             >
               <div>
-                {/* Top Badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/20">
-                    <Calendar className="w-3.5 h-3.5" />
+                {/* Tenure and GPA */}
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     {edu.tenure}
                   </span>
                   {edu.gpa && (
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono font-bold text-emerald-300 bg-emerald-500/10 border border-emerald-500/20">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20">
                       <Award className="w-3.5 h-3.5" />
                       {edu.gpa}
-                    </span>
-                  )}
-                  {edu.verificationNote && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-mono text-indigo-300 bg-indigo-500/10 border border-indigo-500/20">
-                      <ShieldCheck className="w-3.5 h-3.5" />
-                      Verified
                     </span>
                   )}
                 </div>
 
                 {/* Institution & Degree */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors mb-1">
-                  {edu.institution}
-                </h3>
-                <div className="text-sm font-semibold text-slate-300 mb-1">
-                  {edu.degree}
-                </div>
-                {edu.specialization && (
-                  <div className="text-xs font-mono text-indigo-400 mb-4">
-                    {edu.specialization}
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
+                    <GraduationCap className="w-5 h-5" />
                   </div>
-                )}
-
-                {/* Details Bullets */}
-                {edu.details && (
-                  <ul className="space-y-2 mt-4 pt-4 border-t border-white/[0.06]">
-                    {edu.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-
-              {edu.location && (
-                <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-slate-400">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-slate-500" />
-                    {edu.location}
-                  </span>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-100 leading-snug">
+                      {edu.institution}
+                    </h3>
+                    <div className="text-sm font-medium text-slate-300 mt-1">
+                      {edu.degree}
+                    </div>
+                    {edu.specialization && (
+                      <div className="text-xs font-mono text-indigo-400 mt-1">
+                        {edu.specialization}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

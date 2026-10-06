@@ -29,10 +29,7 @@ export interface Education {
   degree: string;
   specialization?: string;
   tenure: string;
-  location?: string;
   gpa?: string;
-  details?: string[];
-  verificationNote?: string;
 }
 
 export interface SkillCategory {
@@ -56,7 +53,7 @@ export const portfolioData = {
   profile: {
     fullName: "Meher Sai Preetam Madiraju",
     preferredName: "Preetam",
-    title: "Data Scientist | Agentic AI & Generative AI Specialist",
+    title: "Data Scientist | Machine Learning, Deep Learning & Generative AI",
     currentOrganization: "ADM (Archer-Daniels-Midland)",
     location: "Bengaluru, Karnataka, India",
     email: "mehersaipreetam@gmail.com",
@@ -71,16 +68,20 @@ export const portfolioData = {
   },
 
   summary: {
-    tagline: "Architecting Scalable Multi-Agent Systems, Autonomous Workflows, and Applied Generative AI.",
-    shortBio: "Meher Sai Preetam Madiraju is a Data Scientist and AI Researcher specializing in Agentic AI, Generative AI, LLMOps, and Machine Learning. He focuses on building production-grade multi-agent architectures, enterprise Knowledge Graph RAG systems, and evaluating autonomous agent workflows.",
-    longBio: "With over 4 years of hands-on data science experience across enterprise and research environments, I bridge the gap between academic AI breakthroughs and production-grade software. My research focuses on autonomous agent communication protocols (Agent2Agent), engineering rigor benchmarks for LLM coding agents, and statistical optimization for ensemble learning. Currently, I deploy enterprise data science solutions at ADM while pursuing advanced machine learning graduate research at Georgia Tech.",
+    tagline: "Machine Learning, Deep Learning & Applied Generative AI Systems.",
+    shortBio: "Data Scientist and AI Researcher working across Machine Learning, Deep Learning, and Generative AI. Focused on statistical learning theory, neural representation architectures, retrieval-augmented generation (Graph RAG), and multi-agent systems.",
+    aboutNarrative: [
+      "My technical work and research interests are centered on Machine Learning, Deep Learning, and Applied Generative AI. I focus on statistical optimization for ensemble learning—such as simplex-constrained sparse calibration to replace uniform prior weights with sparse posteriors—as well as deep representation learning, time-series forecasting, and natural language understanding.",
+      "In generative systems, I focus on Knowledge Graph augmented retrieval (Graph RAG) to address multi-hop reasoning deficiencies, and autonomous multi-agent coordination protocols (Agent2Agent) to decompose complex queries across specialized, task-driven agents under strict latency SLAs.",
+      "My core philosophy prioritizes empirical rigor and reproducibility: grounding autonomous architectures in rigorous software engineering benchmarks, systematic evals, and mathematical guarantees."
+    ],
     coreDomains: [
-      "Agentic AI & Multi-Agent Systems",
+      "Machine Learning & Statistical Theory",
+      "Deep Learning & Neural Architectures",
       "Generative AI & LLMOps",
+      "Agentic AI & Multi-Agent Protocols",
       "Knowledge Graph RAG",
-      "Deep Learning & NLP",
-      "Statistical Ensemble Calibration",
-      "Big Data Analytics & MLOps"
+      "Distributed Computing & MLOps"
     ],
     stats: [
       { label: "Total Citations", value: "7+" },
@@ -101,8 +102,8 @@ export const portfolioData = {
       arxivUrl: "https://arxiv.org/abs/2505.19205",
       githubUrl: "https://github.com/mehersaipreetam/OptiMindTune",
       keyFocus: "Multi-agent systems orchestrating autonomous and distributed hyperparameter optimization.",
-      abstract: "Hyperparameter optimization (HPO) in deep learning remains computationally prohibitive and heavily reliant on manual intervention. Optimindtune introduces an autonomous multi-agent orchestration architecture where specialized agents autonomously navigate model search spaces, schedule distributed evaluations, and dynamically adjust optimization strategies based on empirical convergence signals, significantly reducing human oversight and compute budgets.",
-      tags: ["Multi-Agent Systems", "AutoML", "HPO", "Distributed Systems"],
+      abstract: "Hyperparameter optimization (HPO) in deep learning remains computationally prohibitive and heavily reliant on manual intervention. Optimindtune introduces an autonomous multi-agent orchestration architecture where specialized agents navigate model search spaces, schedule distributed evaluations, and dynamically adjust optimization strategies based on empirical convergence signals, significantly reducing human oversight and compute budgets.",
+      tags: ["Multi-Agent Systems", "AutoML", "HPO", "Deep Learning"],
       bibtex: `@article{madiraju2025optimindtune,
   title={Optimindtune: A Multi-Agent Framework for Intelligent Hyperparameter Optimization},
   author={Madiraju, M. B. and Madiraju, M. S. P.},
@@ -138,7 +139,7 @@ export const portfolioData = {
       arxivUrl: "https://arxiv.org/abs/2608.00805",
       keyFocus: "Performance, latency, SLA adherence, and resource usage trade-offs in multi-agent workflows.",
       abstract: "While multi-agent systems demonstrate impressive qualitative problem-solving, real-world deployment is bottlenecked by latency, token budgets, and strict SLA deadlines. AgentSLABench quantifies the multi-dimensional trade-offs between agent coordination topologies, prompt caching, token budgets, and time-to-first-token in high-throughput enterprise environments.",
-      tags: ["Agentic Systems", "SLA Benchmarking", "LLMOps", "System Performance"],
+      tags: ["Multi-Agent Evals", "SLA Benchmarks", "Latency & Cost", "Systems AI"],
       bibtex: `@article{madiraju2026agentslabench,
   title={AgentSLABench: Evaluating and Benchmarking Agentic Systems Under Resource Constraints},
   author={Madiraju, M. B. and Madiraju, M. S. P.},
@@ -148,20 +149,20 @@ export const portfolioData = {
     },
     {
       id: "sparse-bagging",
-      title: "Simplex-Constrained Sparse Bagging: Transitioning from Uniform Priors to Sparse Posteriors in Ensemble Learning",
-      authors: ["M. S. P. Madiraju", "M. B. Madiraju"],
-      venue: "arXiv preprint",
+      title: "Simplex-Constrained Sparse Bagging Calibration for Robust Ensemble Classification",
+      authors: ["M. S. P. Madiraju"],
+      venue: "Preprint / In Preparation",
       year: 2026,
-      arxivId: "2606.13589",
-      arxivUrl: "https://arxiv.org/abs/2606.13589",
+      arxivId: "2606.22680",
+      arxivUrl: "https://arxiv.org/abs/2606.22680",
       githubUrl: "https://github.com/mehersaipreetam/simplex-constrained-sparse-bagging",
-      keyFocus: "Statistical machine learning and ensemble learning moving from uniform bagging priors to constrained sparse posterior weighting.",
-      abstract: "Standard bootstrap aggregation assigns equal weight (uniform prior) to all estimators in an ensemble, incurring redundant latency and suboptimal calibration. This work proves that post-training sparse posterior optimization over the probability simplex yields statistically calibrated ensembles with strict sparsity guarantees, shrinking inference compute by up to 60% while matching or outperforming unconstrained ensemble generalization.",
-      tags: ["Statistical ML", "Ensemble Methods", "Model Calibration", "Optimization"],
+      keyFocus: "Mathematical optimization and sparse probability calibration for deep learning and tree ensembles.",
+      abstract: "Standard bagging algorithms average predictions across base estimators with uniform 1/M weights, leading to redundant inference costs and suboptimal posterior calibration. By formulating ensemble aggregation as an L1-regularized simplex optimization problem, this work derives sparse estimator weights that preserve or enhance expected calibration error (ECE) while pruning up to 60% of base model inference requirements.",
+      tags: ["Ensemble Calibration", "Simplex Optimization", "Machine Learning", "Probability Calibration"],
       bibtex: `@article{madiraju2026sparsebagging,
-  title={Simplex-Constrained Sparse Bagging: Transitioning from Uniform Priors to Sparse Posteriors in Ensemble Learning},
-  author={Madiraju, M. S. P. and Madiraju, M. B.},
-  journal={arXiv preprint arXiv:2606.13589},
+  title={Simplex-Constrained Sparse Bagging Calibration for Robust Ensemble Classification},
+  author={Madiraju, M. S. P.},
+  journal={arXiv preprint arXiv:2606.22680},
   year={2026}
 }`
     }
@@ -171,7 +172,7 @@ export const portfolioData = {
     {
       company: "ADM (Archer-Daniels-Midland)",
       role: "Data Scientist",
-      tenure: "2026 – Present",
+      tenure: "Jul 2026 – Present",
       location: "Bengaluru, India",
       summary: "Designing and deploying enterprise data science, machine learning, and AI solutions for global agribusiness intelligence and supply chain forecasting.",
       impacts: [
@@ -179,13 +180,13 @@ export const portfolioData = {
         "Developing scalable automated machine learning pipelines to extract structured intelligence from unstructured market signals.",
         "Collaborating across cross-functional engineering and domain leadership teams to integrate AI models into high-reliability decision systems."
       ],
-      tags: ["Enterprise AI", "Machine Learning", "Generative AI", "Python", "Cloud Architecture"],
+      tags: ["Enterprise AI", "Machine Learning", "Deep Learning", "Generative AI", "Cloud Architecture"],
       featured: true
     },
     {
       company: "Tiger Analytics",
       role: "Data Scientist",
-      tenure: "Feb 2024 – 2026",
+      tenure: "Feb 2024 – Jun 2026",
       location: "Bengaluru, India",
       summary: "Specialized in Agentic AI architecture, Agent2Agent protocols, and Knowledge Graph RAG systems for tier-1 financial and credit institutions.",
       impacts: [
@@ -243,40 +244,41 @@ export const portfolioData = {
   education: [
     {
       institution: "Georgia Institute of Technology",
-      degree: "Master of Science in Computer Science (MSCS)",
+      degree: "Master of Science in Computer Science",
       specialization: "Specialization in Machine Learning",
       tenure: "2025 – 2026 (Expected)",
-      location: "Atlanta, GA (Online/Hybrid)",
-      verificationNote: "Verified academic affiliation at gatech.edu",
-      details: [
-        "Focus on Deep Learning, Reinforcement Learning, Autonomous Agent Architectures, and Large-Scale Machine Learning Theory.",
-        "Engaged in advanced research on evaluation benchmarks and multi-agent coordination frameworks."
-      ]
     },
     {
       institution: "Manipal Institute of Technology",
-      degree: "Bachelor of Technology in Computer Science and Engineering",
+      degree: "Bachelor of Technology in Computer Science & Engineering",
       tenure: "2018 – 2022",
-      location: "Manipal, Karnataka, India",
       gpa: "CGPA: 9.11 / 10.0",
-      details: [
-        "Graduated with distinction with top academic honors.",
-        "Coursework in Data Structures & Algorithms, Operating Systems, Database Management Systems, Theory of Computation, and Probability & Statistics."
-      ]
     }
   ] as Education[],
 
   skills: [
     {
-      title: "Agentic AI & Multi-Agent Protocols",
-      icon: "Bot",
+      title: "Machine Learning & Statistical Theory",
+      icon: "Brain",
       skills: [
-        "Agent-to-Agent (A2A) Protocol",
-        "Google Agent Development Kit (ADK)",
-        "LangGraph & LangChain",
-        "Hierarchical Multi-Agent Systems",
-        "Agent Registry & Intelligent Routing",
-        "Autonomous Workflow Execution"
+        "Statistical Learning Theory",
+        "Sparse Bagging & Ensemble Calibration",
+        "Gaussian Process Regression (GPR)",
+        "LightGBM, XGBoost & CatBoost",
+        "Probability Calibration & ECE",
+        "Scikit-Learn & SciPy"
+      ]
+    },
+    {
+      title: "Deep Learning & Neural Architectures",
+      icon: "Layers",
+      skills: [
+        "PyTorch & TensorFlow",
+        "Transformer Architectures",
+        "BERT & RoBERTa",
+        "Representation Learning",
+        "Time-Series Forecasting",
+        "Hyperparameter Optimization"
       ]
     },
     {
@@ -284,137 +286,94 @@ export const portfolioData = {
       icon: "Sparkles",
       skills: [
         "Knowledge Graph RAG (Graph RAG)",
-        "Vector Embeddings & Search",
+        "Vector Embeddings & Hybrid Search",
         "Large Language Models (LLMs)",
-        "Fine-Tuning & Prompt Engineering",
+        "Prompt Engineering & Fine-Tuning",
         "Natural Language Processing (NLP)",
-        "BERT & Transformer Architectures"
+        "Semantic Search & Retrieval"
       ]
     },
     {
-      title: "Machine Learning & Deep Learning",
-      icon: "Brain",
+      title: "Agentic AI & Multi-Agent Protocols",
+      icon: "Bot",
       skills: [
-        "PyTorch & TensorFlow",
-        "Scikit-learn & LightGBM",
-        "Gaussian Process Regression (GPR)",
-        "Statistical Ensemble Learning",
-        "Time Series Forecasting",
-        "SHAP & LIME Interpretability"
+        "Agent-to-Agent (A2A) Protocol",
+        "Google Agent Development Kit (ADK)",
+        "Hierarchical Multi-Agent Systems",
+        "Agent Routing & Coordination",
+        "Evals & Benchmarking (RigorBench)",
+        "Autonomous Workflow Decomposition"
       ]
     },
     {
-      title: "Languages, Distributed Data & APIs",
+      title: "MLOps, Infra & Distributed Computing",
+      icon: "Cpu",
+      skills: [
+        "PySpark & Spark-NLP",
+        "MLflow & Model Lifecycle",
+        "Docker & Containerization",
+        "Redis & Caching Infrastructure",
+        "FastAPI & Asynchronous Services",
+        "Linux & Bash Scripting"
+      ]
+    },
+    {
+      title: "Languages & Core Tools",
       icon: "Code",
       skills: [
-        "Python (Expert)",
-        "SQL (Advanced)",
-        "FastAPI & Flask",
-        "PySpark & Dask",
-        "Pandas, NumPy, SciPy",
-        "TypeScript & Node.js"
-      ]
-    },
-    {
-      title: "Cloud, MLOps & Infrastructure",
-      icon: "Server",
-      skills: [
-        "Google Cloud Platform (GCP)",
-        "Vertex AI",
-        "MLflow",
-        "Docker & Containerization",
-        "Kubernetes",
-        "Redis Caching",
-        "CI/CD & Model Monitoring"
-      ]
-    },
-    {
-      title: "Engineering Leadership & Methodologies",
-      icon: "Users",
-      skills: [
-        "Autonomous Agent Benchmarking",
-        "Cross-Functional Collaboration",
-        "Technical Mentorship",
-        "Enterprise Architecture Planning",
-        "Agile & Scrum Delivery",
-        "Research to Production Handoff"
+        "Python (NumPy, Pandas, SciPy)",
+        "SQL (PostgreSQL, BigQuery)",
+        "TypeScript & JavaScript",
+        "Git & GitHub Actions CI/CD",
+        "Cloud Platforms (AWS, Azure)",
+        "LaTeX & Scientific Writing"
       ]
     }
   ] as SkillCategory[],
 
-  blogs: [
+  articles: [
     {
-      id: "a2a-protocol-architecture",
-      title: "Architecting Enterprise Agentic Systems with the Agent2Agent (A2A) Protocol",
-      excerpt: "A deep dive into decomposing complex business workflows into collaborative multi-agent ecosystems with dynamic registries, routing, and ADK integration.",
-      date: "October 2026",
+      id: "sparse-bagging-deep-dive",
+      title: "Simplex-Constrained Sparse Bagging: Why Calibration Outweighs Complexity",
+      excerpt: "An analysis of transitioning uniform 1/M ensemble weights into sparse posteriors through L1-regularized simplex optimization, reducing compute while improving ECE.",
+      date: "Upcoming",
       readTime: "8 min read",
-      tags: ["Agentic AI", "A2A", "Google ADK", "Architecture"],
-      slug: "architecting-enterprise-agentic-systems",
+      tags: ["Ensemble Learning", "Optimization", "Calibration"],
+      slug: "simplex-constrained-sparse-bagging",
       status: "coming-soon"
     },
     {
-      id: "graph-rag-vs-vector-rag",
-      title: "Graph RAG: Bridging Knowledge Graphs and Vector Search for Enterprise Grounding",
-      excerpt: "Why naive vector search falls short on multi-hop enterprise reasoning, and how knowledge graph traversal fundamentally elevates retrieval accuracy.",
-      date: "September 2026",
+      id: "graph-rag-enterprise",
+      title: "Knowledge Graph RAG vs. Vector Search in High-Risk Financial Workflows",
+      excerpt: "Why pure vector search fails on multi-hop entity queries in delinquency modeling, and how hybrid knowledge graphs restore determinism.",
+      date: "Upcoming",
       readTime: "10 min read",
-      tags: ["Graph RAG", "Knowledge Graphs", "LLMs", "RAG"],
-      slug: "graph-rag-vs-vector-rag",
+      tags: ["Graph RAG", "Knowledge Graphs", "Enterprise AI"],
+      slug: "graph-rag-vs-vector-search",
       status: "coming-soon"
     },
     {
-      id: "sparse-bagging-theory",
-      title: "Simplex-Constrained Sparse Bagging: Cutting Ensemble Compute by 60%",
-      excerpt: "Transitioning from traditional uniform bagging priors to sparse posteriors over the probability simplex for calibrated inference acceleration.",
-      date: "August 2026",
+      id: "agentic-protocols-a2a",
+      title: "Architecting Agent-to-Agent (A2A) Communication in Enterprise Workflows",
+      excerpt: "Design patterns for multi-agent registries, decoupled routing, and hierarchical delegation with strict latency SLA guarantees.",
+      date: "Upcoming",
       readTime: "12 min read",
-      tags: ["Ensemble Learning", "Machine Learning", "Optimization"],
-      slug: "sparse-bagging-theory",
+      tags: ["Agentic AI", "A2A Protocol", "System Architecture"],
+      slug: "agent-to-agent-enterprise-protocols",
       status: "coming-soon"
     },
     {
       id: "benchmarking-coding-agents",
-      title: "RigorBench: What Real-World Coding Benchmarks Miss About Agent Discipline",
-      excerpt: "Evaluating whether autonomous coding agents adhere to regression testing, rollback protocols, and software engineering rigor under pressure.",
-      date: "July 2026",
-      readTime: "7 min read",
-      tags: ["Coding Agents", "Benchmarking", "LLMOps"],
-      slug: "benchmarking-coding-agents",
+      title: "RigorBench: Evaluating Engineering Process Adherence in Coding LLMs",
+      excerpt: "Functional correctness is not enough. How we benchmark test maintenance, regression safeguards, and boundary checking in autonomous coding agents.",
+      date: "Upcoming",
+      readTime: "9 min read",
+      tags: ["LLM Benchmarking", "Evaluation", "Coding Agents"],
+      slug: "rigorbench-evaluating-coding-agents",
       status: "coming-soon"
     }
   ] as BlogPost[],
-
-  featuredProjects: [
-    {
-      title: "OptiMindTune",
-      badge: "AutoML & Multi-Agent",
-      description: "An autonomous multi-agent framework that intelligently navigates hyperparameter optimization search spaces and automates distributed model creation.",
-      tech: ["Python", "Multi-Agent", "AutoML", "scikit-learn", "PyTorch"],
-      github: "https://github.com/mehersaipreetam/OptiMindTune",
-      paper: "https://arxiv.org/abs/2505.19205"
-    },
-    {
-      title: "VoxBook",
-      badge: "Local-First AI & Audio",
-      description: "A local-first, free AI-powered smart audiobook generator and player compiling standard PDF books into structured audiobooks with segment transcripts.",
-      tech: ["Python", "Speech Synthesis", "NLP", "Local AI", "PDF Parsing"],
-      github: "https://github.com/mehersaipreetam/VoxBook"
-    },
-    {
-      title: "Simplex-Constrained Sparse Bagging",
-      badge: "Statistical ML Research",
-      description: "Model-agnostic post-training compression and calibration for bagging ensembles using simplex-constrained sparse optimization.",
-      tech: ["Python", "Optimization", "Simplex", "Ensemble Methods", "Calibration"],
-      github: "https://github.com/mehersaipreetam/simplex-constrained-sparse-bagging",
-      paper: "https://arxiv.org/abs/2606.13589"
-    },
-    {
-      title: "Google ADK Agent-to-Agent Lab",
-      badge: "Multi-Agent Protocols",
-      description: "Hands-on learning lab implementing multi-agent orchestration, communication protocols, and delegation patterns with Google's Agent Development Kit.",
-      tech: ["Python", "Google ADK", "Agent2Agent (A2A)", "Agent Protocols"],
-      github: "https://github.com/mehersaipreetam/adk-a2a-lab"
-    }
-  ]
+  get blogs(): BlogPost[] {
+    return this.articles;
+  }
 };

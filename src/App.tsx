@@ -12,14 +12,9 @@ import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-dark-bg text-slate-100 relative selection:bg-brand-indigo/30 selection:text-white font-sans">
-      {/* Background radial glow accents */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-brand-indigo/10 blur-[130px] rounded-full" />
-        <div className="absolute top-[40%] -left-48 w-[600px] h-[600px] bg-brand-cyan/8 blur-[140px] rounded-full" />
-        <div className="absolute top-[75%] -right-48 w-[600px] h-[600px] bg-brand-violet/8 blur-[140px] rounded-full" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-40" />
-      </div>
+    <div className="min-h-screen bg-[#090b10] text-slate-100 relative selection:bg-slate-700 selection:text-white font-sans antialiased">
+      {/* Subtle background grid */}
+      <div className="fixed inset-0 pointer-events-none z-0 bg-grid-pattern opacity-20" />
 
       {/* Main navigation */}
       <Navbar />
